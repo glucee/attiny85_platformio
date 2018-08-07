@@ -1,19 +1,12 @@
-#include "../lib/rgbled/rgbled.h"
-#include <Arduino.h>
+//ATtiny85 RGB color fading Mood Light NOW WITH LIGHT SENSING CAPABILITIES!!!
 
-int blinkPin = 0;
+#include "../lib/rgbled/rgbled.h"
 
 void setup()
 {
-    Serial.begin(115200);
-    pinMode(blinkPin, OUTPUT);
-    /*auto calabriation when start to use the device*/
+  setup_rgbled();
 }
 
-void loop()
-{
-    digitalWrite(blinkPin, HIGH);
-    delay(500);
-    digitalWrite(blinkPin, LOW);
-    delay(500);
+void loop() {
+    red();
 }
