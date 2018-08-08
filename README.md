@@ -3,7 +3,7 @@
 ## Prepare
 
 1. Attiny85
-2. Tiny AVR Programmer
+2. Tiny AVR Programmer, you could buy one from [this website] (https://www.sparkfun.com/products/11801)
 
 ### Getting Started
 
