@@ -4,6 +4,6 @@
 extern void red();
 extern void yellow();
 extern void green();
+extern void off();
 extern void setup_rgbled();
-
 #endif
