@@ -6,7 +6,7 @@
 
 #define BATTERY_MIN (3.1*BATTERY_SCALE) 
 
-#define BATTERY_SCALE (204.8/7.17) 
+#define BATTERY_SCALE (1024/3.3/5.53) 
 
 const int sensor = A2;
 
@@ -19,7 +19,7 @@ int status, pre_status = 0;
 void loop() {
   int value = analogRead(sensor); 
   int percentage = (value - BATTERY_MIN) * 100 / (BATTERY_MAX - BATTERY_MIN);   
-  if (percentage > 90) status = 3;
+  if (percentage > 85 && percentage <= 100) status = 3;
   else if (percentage > 20) status = 2;
   else if (percentage >= 0) status = 1;
   else status = 0; 
