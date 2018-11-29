@@ -1,4 +1,3 @@
-
 #include "capsense.h"
 
 int cap_pin_out = 1;
@@ -6,7 +5,7 @@ int cap_pin_in = 2;
 int lowcap = 300;  // just above reading when noting is near
 int highcap = 1800; // cap reading when almost touching
 CapacitiveSensor   capsense = CapacitiveSensor(cap_pin_out, cap_pin_in);  // 10M resistor between pins 1 & 2, pin 2 is sensor pin, add a wire and or foil if desired
-int ledPin = 0;
+//int ledPin = 0;
 int dur = 10; //duration is 10 loops
 int brightness;
 bool isOn = 0;
@@ -27,7 +26,7 @@ int Threshold = 64;
 
 void setup_capsense()
 {
-  pinMode(ledPin, OUTPUT); // output pin
+  //pinMode(ledPin, OUTPUT); // output pin
   pinMode(cap_pin_in, INPUT); // output pin
   pinMode(cap_pin_out, OUTPUT); // output pin
 
@@ -78,12 +77,12 @@ void run_capsense()
     //delay(500);
   }
 
+  /*
   if (isOn == true) {
     analogWrite(ledPin, 255);
 
   } else {
     analogWrite(ledPin, 0);
   }
-
-  delay(10);
+  */
 }
